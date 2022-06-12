@@ -4,7 +4,7 @@ try:
     from tkinter import *
     from tkinter.ttk import *
 except ImportError:
-    print("CC requires Python 3.x to run")
+    print("CCC requires Python 3.x to run")
 win=Tk()
 win.title("Circle chart calculator")
 win.resizable(False,False)
