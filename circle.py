@@ -1,7 +1,10 @@
-from turtle import *
-from tkinter.messagebox import showinfo as info
-from tkinter import *
-from tkinter.ttk import *
+try:
+    from turtle import *
+    from tkinter.messagebox import showinfo as info
+    from tkinter import *
+    from tkinter.ttk import *
+except ImportError:
+    print("CC requires Python 3.x to run")
 win=Tk()
 win.title("Circle chart calculator")
 win.resizable(False,False)
@@ -14,22 +17,24 @@ def draw():
     Turtle()
     hideturtle()
     begin_fill()
-    circle(120)
+    circle(180)
     end_fill()
     pencolor("black")
     fillcolor("blue")
     begin_fill()
-    circle(120,d)
+    circle(180,d)
     left(90)
-    forward(120)
+    forward(180)
     left(180-d)
-    forward(120)
+    forward(180)
     end_fill()
     up()
     forward(100)
     down()
+    color("blue")
+    write("FULL ",move=True, font=('Monospace',12,'bold'))
     color('red')
-    write("FULL SIZE",font=('Monospace',12,'bold'))
+    write("SIZE",font=('Monospace',12,'bold'))
     up()
     left(90)
     forward(150)
